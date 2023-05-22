@@ -5,6 +5,7 @@ import dash_bootstrap_components as dbc
 import dash_mantine_components as dmc
 from dash import html, dcc
 from dash.dependencies import Input, Output, State
+from dash.exceptions import PreventUpdate
 from dash_iconify import DashIconify
 
 from CommTrading import constants
@@ -149,8 +150,9 @@ navbar = dbc.Navbar(dbc.Container(
 
 init_layout = html.Div([navbar, html.Br(),
                         dash.page_container,
-                        dcc.Location(id='url', refresh=True, pathname='/HistoricalAnalysis'),
-                        html.Br(), html.Br()]
+                        html.Br(), html.Br(),
+                        dcc.Location(id='url')
+                        ]
                        , style=dict(backgroundColor=constants.APP_BG)
                        , className='main'
                        )
@@ -166,6 +168,16 @@ def add_init_callback(app: dash.Dash):
         if n:
             return not is_open
         return is_open
+
+    @app.callback(
+        Output("url", "pathname"),
+        Input("url", "pathname")
+    )
+    def update_url(pathname):
+        if pathname == '/':
+            return '/HistoricalAnalysis'
+        else:
+            raise PreventUpdate
 
 
 def init_app(app: dash.Dash):

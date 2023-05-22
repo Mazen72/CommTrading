@@ -17,13 +17,13 @@ def get_map_figure(df_country):
                       ),
     ))
 
-    fig.update_layout(margin=dict(l=0, r=0, t=20, b=0, autoexpand=True), autosize=False,
+    fig.update_layout(margin=dict(l=0, r=0, t=0, b=0, autoexpand=True), autosize=False,
                       font=dict(color='black', size=10),
                       legend=dict(yanchor="bottom", y=0.5),
                       width=1024, height=580
                       )
 
-    fig.update_geos(fitbounds="locations", visible=True,  # projection=dict(type='boggs')
+    fig.update_geos(fitbounds=False, visible=True,  # projection=dict(type='boggs')
                     )
 
     fig.update_traces(hoverinfo="none", hovertemplate=None)

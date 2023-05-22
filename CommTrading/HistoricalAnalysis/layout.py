@@ -295,7 +295,7 @@ def historical_analysis_layout():
                        dmc.Space(h=15),
                        dmc.Grid([trades_num_col,
                                  trades_balance_col, top10_col, trades_balance_table_col],
-                                gutter=12, style=dict(paddingLeft='1.3rem', paddingRight='1.3rem', )
+                                gutter=12, style=dict(paddingLeft='1.3rem', paddingRight='1.3rem')
                                 ),
                        dmc.Space(h=20)
                        ])

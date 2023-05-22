@@ -133,44 +133,17 @@ height:calc(18rem + 1vh);
 height:calc(18rem + 1vh);
 }
 
-
-/*
-input, select, textarea{
-    color: white;
-}*/
-
-
-
-
-/* 
-path.surface:hover {
-    stroke: red !important; 
-    color: white !important
-		}*/
  
- .rc-slider-track {
-  background-color: #00bfff;
+.filter_button{
+box-shadow: none !important ;
 }
 
-.rc-slider-dot-active {  
-  border-color: #00bfff;
-  border: solid 2px #00bfff;
-  background-color: #0f2937;
+.options_label:hover{
+background-color: #E9E9E9 !important;
+width: 100% !important;
+padding: 0.1rem !important;
 }
 
-.rc-slider-handle {
-  background-color: #0f2937;
-  border-color: #00bfff;
-}
-
-.rc-slider-handle:hover {
-  border-color: #00bfff;
-}
-
-.rc-slider-handle-active:active {
-  border-color: #00bfff;
-}
-
-.rc-slider-disabled{
-  background-color: #00bfff;
+.dropdown_search{
+  box-shadow: 0.5px solid #E5E5E5 !important;
 }
